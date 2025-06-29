@@ -1,0 +1,165 @@
+/* src/styles/global.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+:root {
+  --primary-color: #28a745; /* Xanh lá cây */
+  --secondary-color: #007bff; /* Xanh dương */
+  --text-color: #333;
+  --light-text-color: #666;
+  --background-color: #f8f9fa;
+  --white-color: #ffffff;
+  --border-color: #e9ecef;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+}
+
+/* Base button style */
+button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #218838; /* Darker green */
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Container cho nội dung chính */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Main content area padding */
+main {
+  padding: 20px 0;
+  min-height: calc(
+    100vh - 120px
+  ); /* Đảm bảo nội dung đủ dài, 120px là ước tính chiều cao header + footer */
+}
+
+/* Form Styling */
+form {
+  background-color: var(--white-color);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+form h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+form .form-group {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--light-text-color);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+  outline: none;
+}
+
+form textarea {
+  resize: vertical; /* Cho phép thay đổi chiều cao */
+  min-height: 120px;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}

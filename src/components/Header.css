@@ -1,0 +1,84 @@
+/* src/components/Header.css */
+.main-header {
+  background-color: var(--white-color);
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav ul li a {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Hiệu ứng gạch chân khi hover */
+.main-nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Style cho icon giỏ hàng */
+.main-nav ul li .cart-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: var(--secondary-color); /* Màu xanh dương cho giỏ hàng */
+}
+
+.main-nav ul li .cart-icon:hover {
+  color: #0056b3; /* Darker blue */
+  text-decoration: none; /* Không gạch chân cho icon giỏ hàng */
+}
+
+.main-nav ul li .cart-icon i {
+  font-size: 1.3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .main-nav ul {
+    flex-wrap: wrap; /* Cho phép các mục xuống dòng */
+    justify-content: center;
+    gap: 15px;
+  }
+}

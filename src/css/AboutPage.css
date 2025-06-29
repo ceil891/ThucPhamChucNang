@@ -1,0 +1,168 @@
+/* src/pages/AboutPage.css */
+.about-page {
+  padding: 40px 0 60px;
+}
+
+.about-page .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-page h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.about-page h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.about-intro,
+.about-mission,
+.about-values,
+.about-team,
+.about-why-us,
+.about-cta {
+  background-color: var(--white-color);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+}
+
+.about-intro p,
+.about-why-us p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--light-text-color);
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.about-mission h2,
+.about-values h2,
+.about-team h2,
+.about-why-us h2 {
+  font-size: 2.2rem;
+  color: var(--text-color);
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.about-mission h2::after,
+.about-values h2::after,
+.about-team h2::after,
+.about-why-us h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  border-radius: 2px;
+}
+
+.about-values ul,
+.about-why-us ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-values li,
+.about-why-us li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--light-text-color);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.about-values li i,
+.about-why-us li i {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.about-values strong {
+  color: var(--text-color);
+}
+
+.team-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto 0;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-cta {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 40px;
+}
+
+.about-cta p {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+.about-cta button {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.about-cta button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-page h1 {
+    font-size: 2.2rem;
+  }
+  .about-mission h2,
+  .about-values h2,
+  .about-team h2,
+  .about-why-us h2 {
+    font-size: 1.8rem;
+  }
+  .about-cta p {
+    font-size: 1.2rem;
+  }
+  .about-cta button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}

@@ -1,0 +1,230 @@
+/* src/pages/CartPage.css */
+.cart-page {
+  padding: 40px 0 60px;
+  min-height: calc(100vh - 200px); /* Đảm bảo đủ chiều cao */
+}
+
+.cart-page .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.cart-page h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.empty-cart-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--light-text-color);
+  margin-top: 50px;
+  padding: 20px;
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.empty-cart-message a {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.empty-cart-message a:hover {
+  color: #218838;
+}
+
+.cart-items-list {
+  background-color: var(--white-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image-link {
+  flex-shrink: 0;
+  margin-right: 20px;
+  display: block;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-item-name-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart-item-name-link h3 {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-bottom: 0;
+  transition: color 0.2s ease;
+}
+
+.cart-item-name-link h3:hover {
+  color: var(--primary-color);
+}
+
+.cart-item-price {
+  font-size: 1.1rem;
+  color: var(--light-text-color);
+  font-weight: 500;
+}
+
+.cart-item-quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.cart-item-quantity-control label {
+  font-weight: normal;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.cart-item-quantity-control input[type="number"] {
+  width: 60px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  -moz-appearance: textfield;
+}
+
+.cart-item-quantity-control input[type="number"]::-webkit-outer-spin-button,
+.cart-item-quantity-control input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.remove-item-btn {
+  background-color: #e74c3c;
+  color: var(--white-color);
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+}
+
+.remove-item-btn:hover {
+  background-color: #c0392b;
+}
+
+.cart-item-subtotal {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: 10px;
+}
+
+.cart-summary {
+  background-color: var(--white-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+  text-align: right;
+  border-top: 3px solid var(--primary-color);
+}
+
+.cart-summary h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cart-summary p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.cart-summary .total-price {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.checkout-btn {
+  width: auto;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cart-item-image-link {
+    margin-right: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+  }
+  .cart-item-image {
+    margin: 0 auto;
+  }
+  .cart-item-details {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .remove-item-btn {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .cart-summary {
+    text-align: center;
+  }
+  .checkout-btn {
+    width: 100%;
+  }
+}

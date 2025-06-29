@@ -1,0 +1,55 @@
+/* src/pages/PrivacyPolicyPage.css */
+
+.privacy-policy-page {
+  padding: 40px 0 60px;
+}
+
+.privacy-policy-page .container {
+  max-width: 900px; /* Giới hạn chiều rộng để dễ đọc */
+}
+
+.privacy-policy-page h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.privacy-policy-page h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-top: 35px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+.privacy-policy-page h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.privacy-policy-page p,
+.privacy-policy-page ul,
+.privacy-policy-page ol {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--light-text-color);
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.privacy-policy-page ul,
+.privacy-policy-page ol {
+  margin-left: 25px;
+}
+
+.privacy-policy-page li {
+  margin-bottom: 8px;
+}
+
+.privacy-policy-page strong {
+  color: var(--text-color);
+}

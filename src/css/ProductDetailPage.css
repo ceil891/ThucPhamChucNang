@@ -1,0 +1,141 @@
+/* src/pages/ProductDetailPage.css */
+.product-detail-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 200px); /* Đảm bảo đủ chiều cao */
+}
+
+.product-not-found {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e74c3c;
+  margin-top: 50px;
+}
+
+.product-detail-content {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start; /* Căn trên các mục */
+  background-color: var(--white-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.product-image-large {
+  flex: 1; /* Chiếm 1 phần */
+  min-width: 300px; /* Kích thước tối thiểu cho ảnh */
+  max-width: 450px; /* Kích thước tối đa cho ảnh */
+  text-align: center;
+}
+
+.product-image-large img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.product-info {
+  flex: 2; /* Chiếm nhiều không gian hơn */
+  min-width: 350px;
+}
+
+.product-info h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.product-price-detail {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.product-description-detail {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--light-text-color);
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.product-benefits,
+.product-usage {
+  margin-bottom: 25px;
+}
+
+.product-benefits h3,
+.product-usage h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+.product-benefits ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product-benefits li {
+  font-size: 1.05rem;
+  color: var(--light-text-color);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-benefits li i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.product-usage p {
+  font-size: 1.05rem;
+  color: var(--light-text-color);
+  line-height: 1.7;
+}
+
+.add-to-cart-detail-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-detail-btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-detail-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-image-large,
+  .product-info {
+    min-width: unset;
+    width: 100%;
+    max-width: 100%;
+  }
+  .product-info h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .product-price-detail {
+    text-align: center;
+  }
+  .add-to-cart-detail-btn {
+    width: 100%;
+  }
+}

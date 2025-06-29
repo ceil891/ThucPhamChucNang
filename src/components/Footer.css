@@ -1,0 +1,46 @@
+/* src/components/Footer.css */
+.main-footer {
+  background-color: #343a40; /* Dark background */
+  color: var(--white-color);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+  gap: 15px;
+}
+
+.main-footer p {
+  margin: 0;
+}
+
+.footer-links a {
+  color: var(--white-color);
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-footer .container {
+    flex-direction: column;
+  }
+  .footer-links {
+    margin-top: 10px;
+  }
+  .footer-links a {
+    display: block;
+    margin: 5px 0;
+  }
+}
