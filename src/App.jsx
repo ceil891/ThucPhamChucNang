@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header"; // <-- Sửa đường dẫn nếu lỗi
 import Footer from "./components/Footer"; // <-- Sửa đường dẫn nếu lỗi
 
-// Import tất cả các trang
+// Import tất cả các tran
 import HomePage from "./page/HomePage";
 import ProductsPage from "./page/ProductsPage";
 import ProductDetailPage from "./page/ProductDetailPage";
@@ -14,6 +14,8 @@ import CartPage from "./page/CartPage";
 import AboutPage from "./page/AboutPage"; // <-- Đảm bảo có export default trong AboutPage.jsx
 import ContactPage from "./page/ContactPage";
 import PrivacyPolicyPage from "./page/PrivacyPolicyPage";
+;
+
 // import TermsOfServicePage from './pages/TermsOfServicePage'; // Nếu bạn tạo trang này
 
 function App() {
@@ -34,11 +36,13 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           {/* <Route path="/terms-of-service" element={<TermsOfServicePage />} /> */}
           {/* Bạn có thể thêm các Route khác ở đây (ví dụ: trang đăng nhập, đăng ký) */}
+        
         </Routes>
       </main>
       <Footer /> {/* Footer hiển thị trên tất cả các trang */}
     </Router>
   );
 }
+import Timer from "./page/bach/thanhtoan";
 
 export default App;
